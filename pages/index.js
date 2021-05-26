@@ -17,8 +17,12 @@ function Home() {
                         if (count < 0) {
                             count = 1
                         }
-                        if (count > 0) {
+                        if (count == 2) {
                             n2 *= 7
+                            count--
+                        }else if(count > 2){
+                            n2 *= 7
+                            count -= 2
                         }
                     }}></input><input id='btnum' type="button" value="8" onClick={() => {
                         var res = document.getElementById('res')
@@ -26,8 +30,12 @@ function Home() {
                         if (count < 0) {
                             count = 1
                         }
-                        if (count > 0) {
+                        if (count == 2) {
                             n2 *= 8
+                            count--
+                        }else if(count > 2){
+                            n2 *= 8
+                            count -= 2
                         }
                     }}></input><input id='btnum' type="button" value="9" onClick={() => {
                         var res = document.getElementById('res')
@@ -35,8 +43,12 @@ function Home() {
                         if (count < 0) {
                             count = 1
                         }
-                        if (count > 0) {
+                        if (count == 2) {
                             n2 *= 9
+                            count--
+                        }else if(count > 2){
+                            n2 *= 9
+                            count -= 2
                         }
                     }}></input><input id='mult' type="button" value="X" onClick={() => {
                         if (count == 0) {
@@ -44,11 +56,11 @@ function Home() {
                             var result = Number(res.value)
                             n2 = result
                             res.value += 'x'
-                            count++
+                            count+= 2
                         }else{
                             res = document.getElementById('res')
                             res.value += 'x'
-                            count++
+                            count += 2
                         }
                     }}></input>
                 </div>
@@ -59,8 +71,12 @@ function Home() {
                         if (count < 0) {
                             count = 1
                         }
-                        if (count > 0) {
+                        if (count == 2) {
                             n2 *= 4
+                            count--
+                        }else if(count > 2){
+                            n2 *= 4
+                            count -= 2
                         }
                     }}></input><input id='btnum' type="button" value="5" onClick={() => {
                         var res = document.getElementById('res')
@@ -68,8 +84,12 @@ function Home() {
                         if (count < 0) {
                             count = 1
                         }
-                        if (count > 0) {
+                        if (count == 2) {
                             n2 *= 5
+                            count--
+                        }else if(count > 2){
+                            n2 *= 5
+                            count -= 2
                         }
                     }}></input><input id='btnum' type="button" value="6" onClick={() => {
                         var res = document.getElementById('res')
@@ -77,8 +97,12 @@ function Home() {
                         if (count < 0) {
                             count = 1
                         }
-                        if (count > 0) {
+                        if (count == 2) {
                             n2 *= 6
+                            count--
+                        }else if(count > 2){
+                            n2 *= 6
+                            count -= 2
                         }
                     }}></input><input id='menos' type="button" value="-" onClick={() => {
                         var res = document.getElementById('res')
@@ -93,8 +117,12 @@ function Home() {
                         if (count < 0) {
                             count = 1
                         }
-                        if (count > 0) {
+                        if (count == 2) {
                             n2 *= 1
+                            count--
+                        }else if(count > 2){
+                            n2 *= 1
+                            count -= 2
                         }
                     }}></input><input id='btnum' type="button" value="2" onClick={() => {
                         var res = document.getElementById('res')
@@ -102,8 +130,12 @@ function Home() {
                         if (count < 0) {
                             count = 1
                         }
-                        if (count > 0) {
+                        if (count == 2) {
                             n2 *= 2
+                            count--
+                        }else if(count > 2){
+                            n2 *= 2
+                            count -= 2
                         }
                     }}></input><input id='btnum' type="button" value="3" onClick={() => {
                         var res = document.getElementById('res')
@@ -111,8 +143,12 @@ function Home() {
                         if (count < 0) {
                             count = 1
                         }
-                        if (count > 0) {
+                        if (count == 2) {
                             n2 *= 3
+                            count--
+                        }else if(count > 2){
+                            n2 *= 3
+                            count -= 2
                         }
                     }}></input><input id='mais' type="button" value="+" onClick={() => {
                         var res = document.getElementById('res')
@@ -132,8 +168,12 @@ function Home() {
                         if (count < 0) {
                             count = 1
                         }
-                        if (count > 0) {
+                        if (count == 2) {
                             n2 *= 0
+                            count--
+                        }else if(count > 2){
+                            n2 *= 0
+                            count -= 2
                         }
                     }}></input><input id='comma' type="button" value="," onClick={() => {
                         var res = document.getElementById('res')
