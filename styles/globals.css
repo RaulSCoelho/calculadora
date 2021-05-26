@@ -40,6 +40,7 @@ div#btn{
 input#igual{
     text-align: center;
     background-color: white;
+    font: bold 15pt Arial;
     width: 30px;
     height: 30px;
 }
@@ -50,42 +51,49 @@ div#teclado{
 
 input#btnum{
     background-color: white;
+    font: bold 15pt Arial;
     width: 30px;
     height: 30px;
 }
 
 input#mult{
     background-color: white;
+    font: bold 15pt Arial;
     width: 30px;
     height: 30px;
 }
 
 input#menos{
     background-color: white;
+    font: bold 15pt Arial;
     width: 30px;
     height: 30px;
 }
 
 input#mais{
     background-color: white;
+    font: bold 15pt Arial;
     width: 30px;
     height: 30px;
 }
 
 input#div{
     background-color: white;
+    font: bold 15pt Arial;
     width: 30px;
     height: 30px;
 }
 
 input#comma{
     background-color: white;
+    font: bold 15pt Arial;
     width: 30px;
     height: 30px;
 }
 
 input#clear{
     background-color: white;
+    font: bold 15pt Arial;
     width: 30px;
     height: 30px;
 }
