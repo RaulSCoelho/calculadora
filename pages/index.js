@@ -24,6 +24,7 @@ function Home() {
                         res.innerHTML += "9"
                      }}></input><input id='mult' type="button" value="X" onClick={() => {
                         var res = document.getElementById('resultado')
+                        var resnumber = Number(res.value)
                         res.innerHTML += "x"
                      }}></input>
                 </div>
@@ -37,7 +38,11 @@ function Home() {
                      }}></input><input id='btnum' type="button" value="6" onClick={() => {
                         var res = document.getElementById('resultado')
                         res.innerHTML += "6"
-                     }}></input><input id='menos' type="button" value="-" ></input>
+                     }}></input><input id='menos' type="button" value="-" onClick={() => {
+                        var res = document.getElementById('resultado')
+                        var resnumber = Number(res.value)
+                        res.innerHTML += "-"
+                     }}></input>
                 </div>
                 <div>
                     <input id='btnum' type="button" value="1" onClick={() => {
@@ -49,17 +54,34 @@ function Home() {
                      }}></input><input id='btnum' type="button" value="3" onClick={() => {
                         var res = document.getElementById('resultado')
                         res.innerHTML += "3"
-                     }}></input><input id='mais' type="button" value="+" ></input>
+                     }}></input><input id='mais' type="button" value="+" onClick={() => {
+                        var res = document.getElementById('resultado')
+                        var resnumber = Number(res.value)
+                        res.innerHTML += "+"
+                     }}></input>
                 </div>
                 <div>
                     <input id='clear' type="button" value="C" onClick={() => {
                         var res = document.getElementById('resultado')
                         res.innerHTML = ""
-                     }}></input><input id='btnum' type="button" value="0" ></input><input id='comma' type="button" value="," ></input><input id='div' type="button" value="÷"></input>
+                     }}></input><input id='btnum' type="button" value="0" onClick={() => {
+                        var res = document.getElementById('resultado')
+                        res.innerHTML += "0"
+                     }}></input><input id='comma' type="button" value="," onClick={() => {
+                        var res = document.getElementById('resultado')
+                        res.innerHTML += ","
+                     }}></input><input id='div' type="button" value="÷" onClick={() => {
+                        var res = document.getElementById('resultado')
+                        var resnumber = Number(res.value)
+                        res.innerHTML += "÷"
+                     }}></input>
                 </div>
             </div>
             <div id='btn'>
-                <input id="igual" type="button" value="=" onClick={() => { }}></input>
+                <input id="igual" type="button" value="=" onClick={() => {
+                        var res = document.getElementById('resultado')
+                        res.innerHTML = 'Período de teste'
+                     }}></input>
             </div>
         </section>
         <footer>
