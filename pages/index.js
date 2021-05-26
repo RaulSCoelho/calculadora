@@ -22,7 +22,10 @@ function Home() {
                      }}></input><input id='btnum' type="button" value="9" onClick={() => {
                         var res = document.getElementById('resultado')
                         res.innerHTML += "9"
-                     }}></input><input id='mult' type="button" value="X" ></input>
+                     }}></input><input id='mult' type="button" value="X" onClick={() => {
+                        var res = document.getElementById('resultado')
+                        res.innerHTML += "x"
+                     }}></input>
                 </div>
                 <div>
                     <input id='btnum' type="button" value="4" onClick={() => {
