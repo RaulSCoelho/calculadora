@@ -20,7 +20,8 @@ function Home() {
                         res.value += "9"
                      }}></input><input id='mult' type="button" value="X" onClick={() => {
                         var res = document.getElementById('res')
-                        window.alert(res)
+                        var result = Number(res.value)
+                        res.value += 'x'
                      }}></input>
                 </div>
                 <div>
@@ -35,7 +36,7 @@ function Home() {
                         res.value += "6"
                      }}></input><input id='menos' type="button" value="-" onClick={() => {
                         var res = document.getElementById('res')
-                        var resnumber = Number(res.value)
+                        var result = Number(res.value)
                         res.value += "-"
                      }}></input>
                 </div>
@@ -51,7 +52,7 @@ function Home() {
                         res.value += "3"
                      }}></input><input id='mais' type="button" value="+" onClick={() => {
                         var res = document.getElementById('res')
-                        var resnumber = Number(res.value)
+                        var result = Number(res.value)
                         res.value += "+"
                      }}></input>
                 </div>
@@ -67,7 +68,7 @@ function Home() {
                         res.value += ","
                      }}></input><input id='div' type="button" value="÷" onClick={() => {
                         var res = document.getElementById('res')
-                        var resnumber = Number(res.value)
+                        var result = Number(res.value)
                         res.value += "÷"
                      }}></input>
                 </div>
