@@ -2,11 +2,15 @@ import Link from 'next/link'
 
 function Home() {
     var resultado
-    var num9 = ""
-    var num9n = 0
-    var nove = 0
-    var count = 0
-    var n2 = 1
+    var multcat = ""
+    var multcatnum = 0
+    var multquant = 0
+    var multcount = 0
+    var divcat = ""
+    var divcatnum = 0
+    var divquant = 0
+    var divcount = 0
+    var n = 1
     return (<div>
         <header>
             <h1>Calculadora</h1>
@@ -18,71 +22,116 @@ function Home() {
                     <input id='btnum' type="button" value="7" onClick={() => {
                         var res = document.getElementById('res')
                         res.value += "7"
-                        if (count < 0) {
-                            count = 1
+                        if (multcount < 0) {
+                            multcount = 1
                         }
-                        nove++
-                        if (count == 2) {
-                            resultado = n2 * 7
-                            num9 += "7"
-                            count--
-                        } else if (count == 1) {
-                            for (nove; nove > 1; nove--) {
-                                num9 += "7"
+                        multquant++
+                        if (multcount == 2) {
+                            resultado = n * 7
+                            multcat += "7"
+                            multcount--
+                        } else if (multcount == 1) {
+                            for (multquant; multquant > 1; multquant--) {
+                                multcat += "7"
                             }
-                            num9n = Number(num9)
-                            resultado = num9n * n2
+                            multcatnum = Number(multcat)
+                            resultado = multcatnum * n
+                        }
+                        if (divcount < 0) {
+                            divcount = 2
+                        }
+                        divquant++
+                        if (divcount == 2) {
+                            resultado = n / 7
+                            divcat += "7"
+                            divcount--
+                        } else if (divcount == 1) {
+                            for (divquant; divquant > 1; divquant--) {
+                                divcat += "7"
+                            }
+                            divcatnum = Number(divcat)
+                            resultado = n / divcatnum
                         }
                     }}></input><input id='btnum' type="button" value="8" onClick={() => {
                         var res = document.getElementById('res')
                         res.value += "8"
-                        if (count < 0) {
-                            count = 2
+                        if (multcount < 0) {
+                            multcount = 2
                         }
-                        nove++
-                        if (count == 2) {
-                            resultado = n2 * 8
-                            num9 += "8"
-                            count--
-                        } else if (count == 1) {
-                            for (nove; nove > 1; nove--) {
-                                num9 += "8"
+                        multquant++
+                        if (multcount == 2) {
+                            resultado = n * 8
+                            multcat += "8"
+                            multcount--
+                        } else if (multcount == 1) {
+                            for (multquant; multquant > 1; multquant--) {
+                                multcat += "8"
                             }
-                            num9n = Number(num9)
-                            resultado = num9n * n2
+                            multcatnum = Number(multcat)
+                            resultado = multcatnum * n
+                        }
+                        if (divcount < 0) {
+                            divcount = 2
+                        }
+                        divquant++
+                        if (divcount == 2) {
+                            resultado = n / 8
+                            divcat += "8"
+                            divcount--
+                        } else if (divcount == 1) {
+                            for (divquant; divquant > 1; divquant--) {
+                                divcat += "8"
+                            }
+                            divcatnum = Number(divcat)
+                            resultado = n / divcatnum
                         }
                     }}></input><input id='btnum' type="button" value="9" onClick={() => {
                         var res = document.getElementById('res')
                         res.value += "9"
-                        if (count < 0) {
-                            count = 1
+                        if (multcount < 0) {
+                            multcount = 1
                         }
-                        nove++
-                        if (count == 2) {
-                            resultado = n2 * 9
-                            num9 += "9"
-                            count--
-                        } else if (count == 1) {
-                            for (nove; nove > 1; nove--) {
-                                num9 += "9"
+                        multquant++
+                        if (multcount == 2) {
+                            resultado = n * 9
+                            multcat += "9"
+                            multcount--
+                        } else if (multcount == 1) {
+                            for (multquant; multquant > 1; multquant--) {
+                                multcat += "9"
                             }
-                            num9n = Number(num9)
-                            resultado = num9n * n2
+                            multcatnum = Number(multcat)
+                            resultado = multcatnum * n
+                        }
+                        if (divcount < 0) {
+                            divcount = 2
+                        }
+                        divquant++
+                        if (divcount == 2) {
+                            resultado = n / 9
+                            divcat += "9"
+                            divcount--
+                        } else if (divcount == 1) {
+                            for (divquant; divquant > 1; divquant--) {
+                                divcat += "9"
+                            }
+                            divcatnum = Number(divcat)
+                            resultado = n / divcatnum
                         }
                     }}></input><input id='mult' type="button" value="X" onClick={() => {
-                        n2 = resultado
-                        nove = 0
-                        num9 = ""
-                        if (count == 0) {
+                        n = resultado
+                        multquant = 0
+                        multcat = ""
+                        if (multcount == 0) {
                             var res = document.getElementById('res')
                             var result = Number(res.value)
-                            n2 = result
+                            n = result
                             res.value += 'x'
-                            count += 2
+                            multcount += 2
                         } else {
                             res = document.getElementById('res')
                             res.value += 'x'
-                            count = 2
+                            multcount = 2
                         }
                     }}></input>
                 </div>
@@ -90,118 +139,208 @@ function Home() {
                     <input id='btnum' type="button" value="4" onClick={() => {
                         var res = document.getElementById('res')
                         res.value += "4"
-                        if (count < 0) {
-                            count = 1
+                        if (multcount < 0) {
+                            multcount = 1
                         }
-                        nove++
-                        if (count == 2) {
-                            resultado = n2 * 4
-                            num9 += "4"
-                            count--
-                        } else if (count == 1) {
-                            for (nove; nove > 1; nove--) {
-                                num9 += "4"
+                        multquant++
+                        if (multcount == 2) {
+                            resultado = n * 4
+                            multcat += "4"
+                            multcount--
+                        } else if (multcount == 1) {
+                            for (multquant; multquant > 1; multquant--) {
+                                multcat += "4"
                             }
-                            num9n = Number(num9)
-                            resultado = num9n * n2
+                            multcatnum = Number(multcat)
+                            resultado = multcatnum * n
+                        }
+                        if (divcount < 0) {
+                            divcount = 2
+                        }
+                        divquant++
+                        if (divcount == 2) {
+                            resultado = n / 4
+                            divcat += "4"
+                            divcount--
+                        } else if (divcount == 1) {
+                            for (divquant; divquant > 1; divquant--) {
+                                divcat += "4"
+                            }
+                            divcatnum = Number(divcat)
+                            resultado = n / divcatnum
                         }
                     }}></input><input id='btnum' type="button" value="5" onClick={() => {
                         var res = document.getElementById('res')
                         res.value += "5"
-                        if (count < 0) {
-                            count = 1
+                        if (multcount < 0) {
+                            multcount = 1
                         }
-                        nove++
-                        if (count == 2) {
-                            resultado = n2 * 5
-                            num9 += "5"
-                            count--
-                        } else if (count == 1) {
-                            for (nove; nove > 1; nove--) {
-                                num9 += "5"
+                        multquant++
+                        if (multcount == 2) {
+                            resultado = n * 5
+                            multcat += "5"
+                            multcount--
+                        } else if (multcount == 1) {
+                            for (multquant; multquant > 1; multquant--) {
+                                multcat += "5"
                             }
-                            num9n = Number(num9)
-                            resultado = num9n * n2
+                            multcatnum = Number(multcat)
+                            resultado = multcatnum * n
+                        }
+                        if (divcount < 0) {
+                            divcount = 2
+                        }
+                        divquant++
+                        if (divcount == 2) {
+                            resultado = n / 5
+                            divcat += "5"
+                            divcount--
+                        } else if (divcount == 1) {
+                            for (divquant; divquant > 1; divquant--) {
+                                divcat += "5"
+                            }
+                            divcatnum = Number(divcat)
+                            resultado = n / divcatnum
                         }
                     }}></input><input id='btnum' type="button" value="6" onClick={() => {
                         var res = document.getElementById('res')
                         res.value += "6"
-                        if (count < 0) {
-                            count = 1
+                        if (multcount < 0) {
+                            multcount = 1
                         }
-                        nove++
-                        if (count == 2) {
-                            resultado = n2 * 6
-                            num9 += "6"
-                            count--
-                        } else if (count == 1) {
-                            for (nove; nove > 1; nove--) {
-                                num9 += "6"
+                        multquant++
+                        if (multcount == 2) {
+                            resultado = n * 6
+                            multcat += "6"
+                            multcount--
+                        } else if (multcount == 1) {
+                            for (multquant; multquant > 1; multquant--) {
+                                multcat += "6"
                             }
-                            num9n = Number(num9)
-                            resultado = num9n * n2
+                            multcatnum = Number(multcat)
+                            resultado = multcatnum * n
+                        }
+                        if (divcount < 0) {
+                            divcount = 2
+                        }
+                        divquant++
+                        if (divcount == 2) {
+                            resultado = n / 6
+                            divcat += "6"
+                            divcount--
+                        } else if (divcount == 1) {
+                            for (divquant; divquant > 1; divquant--) {
+                                divcat += "6"
+                            }
+                            divcatnum = Number(divcat)
+                            resultado = n / divcatnum
                         }
                     }}></input><input id='menos' type="button" value="-" onClick={() => {
                         /*var res = document.getElementById('res')
                         var result = Number(res.value)
                         res.value += "-"*/
-                        window.alert(`num9n: ${num9n} num9: ${num9} nove: ${nove} count: ${count}`)
+                        window.alert(`divcatnum: ${divcatnum} divcat: ${divcat} divquant: ${divquant} divcount: ${divcount} n: ${n}`)
                     }}></input>
                 </div>
                 <div>
                     <input id='btnum' type="button" value="1" onClick={() => {
                         var res = document.getElementById('res')
                         res.value += "1"
-                        if (count < 0) {
-                            count = 1
+                        if (multcount < 0) {
+                            multcount = 1
                         }
-                        nove++
-                        if (count == 2) {
-                            resultado = n2 * 1
-                            num9 += "1"
-                            count--
-                        } else if (count == 1) {
-                            for (nove; nove > 1; nove--) {
-                                num9 += "1"
+                        multquant++
+                        if (multcount == 2) {
+                            resultado = n * 1
+                            multcat += "1"
+                            multcount--
+                        } else if (multcount == 1) {
+                            for (multquant; multquant > 1; multquant--) {
+                                multcat += "1"
                             }
-                            num9n = Number(num9)
-                            resultado = num9n * n2
+                            multcatnum = Number(multcat)
+                            resultado = multcatnum * n
+                        }
+                        if (divcount < 0) {
+                            divcount = 2
+                        }
+                        divquant++
+                        if (divcount == 2) {
+                            resultado = n / 1
+                            divcat += "1"
+                            divcount--
+                        } else if (divcount == 1) {
+                            for (divquant; divquant > 1; divquant--) {
+                                divcat += "1"
+                            }
+                            divcatnum = Number(divcat)
+                            resultado = n / divcatnum
                         }
                     }}></input><input id='btnum' type="button" value="2" onClick={() => {
                         var res = document.getElementById('res')
                         res.value += "2"
-                        if (count < 0) {
-                            count = 1
+                        if (multcount < 0) {
+                            multcount = 1
                         }
-                        nove++
-                        if (count == 2) {
-                            resultado = n2 * 2
-                            num9 += "2"
-                            count--
-                        } else if (count == 1) {
-                            for (nove; nove > 1; nove--) {
-                                num9 += "2"
+                        multquant++
+                        if (multcount == 2) {
+                            resultado = n * 2
+                            multcat += "2"
+                            multcount--
+                        } else if (multcount == 1) {
+                            for (multquant; multquant > 1; multquant--) {
+                                multcat += "2"
                             }
-                            num9n = Number(num9)
-                            resultado = num9n * n2
+                            multcatnum = Number(multcat)
+                            resultado = multcatnum * n
+                        }
+                        if (divcount < 0) {
+                            divcount = 2
+                        }
+                        divquant++
+                        if (divcount == 2) {
+                            resultado = n / 2
+                            divcat += "2"
+                            divcount--
+                        } else if (divcount == 1) {
+                            for (divquant; divquant > 1; divquant--) {
+                                divcat += "2"
+                            }
+                            divcatnum = Number(divcat)
+                            resultado = n / divcatnum
                         }
                     }}></input><input id='btnum' type="button" value="3" onClick={() => {
                         var res = document.getElementById('res')
                         res.value += "3"
-                        if (count < 0) {
-                            count = 1
+                        if (multcount < 0) {
+                            multcount = 1
                         }
-                        nove++
-                        if (count == 2) {
-                            resultado = n2 * 3
-                            num9 += "3"
-                            count--
-                        } else if (count == 1) {
-                            for (nove; nove > 1; nove--) {
-                                num9 += "3"
+                        multquant++
+                        if (multcount == 2) {
+                            resultado = n * 3
+                            multcat += "3"
+                            multcount--
+                        } else if (multcount == 1) {
+                            for (multquant; multquant > 1; multquant--) {
+                                multcat += "3"
                             }
-                            num9n = Number(num9)
-                            resultado = num9n * n2
+                            multcatnum = Number(multcat)
+                            resultado = multcatnum * n
+                        }
+                        if (divcount < 0) {
+                            divcount = 2
+                        }
+                        divquant++
+                        if (divcount == 2) {
+                            resultado = n / 3
+                            divcat += "3"
+                            divcount--
+                        } else if (divcount == 1) {
+                            for (divquant; divquant > 1; divquant--) {
+                                divcat += "3"
+                            }
+                            divcatnum = Number(divcat)
+                            resultado = n / divcatnum
                         }
                     }}></input><input id='mais' type="button" value="+" onClick={() => {
                         var res = document.getElementById('res')
@@ -213,37 +352,67 @@ function Home() {
                     <input id='clear' type="button" value="C" onClick={() => {
                         var res = document.getElementById('res')
                         res.value = ""
-                        n2 = 1
-                        count = 0
-                        num9 = ""
-                        num9n = 0
-                        nove = 0
+                        n = 1
+                        multcount = 0
+                        multcat = ""
+                        multcatnum = 0
+                        multquant = 0
+                        divcount = 0
+                        divcat = ""
+                        divcatnum = 0
+                        divquant = 0
                         resultado = 0
                     }}></input><input id='btnum' type="button" value="0" onClick={() => {
                         var res = document.getElementById('res')
                         res.value += "0"
-                        if (count < 0) {
-                            count = 1
+                        if (multcount < 0) {
+                            multcount = 1
                         }
-                        nove++
-                        if (count == 2) {
-                            resultado = n2 * 0
-                            num9 += "0"
-                            count--
-                        } else if (count == 1) {
-                            for (nove; nove > 1; nove--) {
-                                num9 += "0"
+                        multquant++
+                        if (multcount == 2) {
+                            resultado = n * 0
+                            multcat += "0"
+                            multcount--
+                        } else if (multcount == 1) {
+                            for (multquant; multquant > 1; multquant--) {
+                                multcat += "0"
                             }
-                            num9n = Number(num9)
-                            resultado = num9n * n2
+                            multcatnum = Number(multcat)
+                            resultado = multcatnum * n
+                        }
+                        if (divcount < 0) {
+                            divcount = 2
+                        }
+                        divquant++
+                        if (divcount == 2) {
+                            resultado = n / 0
+                            divcat += "0"
+                            divcount--
+                        } else if (divcount == 1) {
+                            for (divquant; divquant > 1; divquant--) {
+                                divcat += "0"
+                            }
+                            divcatnum = Number(divcat)
+                            resultado = n / divcatnum
                         }
                     }}></input><input id='comma' type="button" value="," onClick={() => {
                         var res = document.getElementById('res')
                         res.value += ","
                     }}></input><input id='div' type="button" value="÷" onClick={() => {
-                        var res = document.getElementById('res')
-                        var result = Number(res.value)
-                        res.value += "÷"
+                        n = resultado
+                        divquant = 0
+                        divcat = ""
+                        if (divcount == 0) {
+                            var res = document.getElementById('res')
+                            var result = Number(res.value)
+                            n = result
+                            res.value += '÷'
+                            divcount += 2
+                        } else {
+                            res = document.getElementById('res')
+                            res.value += '÷'
+                            divcount = 2
+                        }
                     }}></input>
                 </div>
             </div>
@@ -251,11 +420,15 @@ function Home() {
                 <input id="igual" type="button" value="=" onClick={() => {
                     var res = document.getElementById('res')
                     res.value = resultado
-                    n2 = 1
-                    count = 0
-                    num9 = ""
-                    num9n = 0
-                    nove = 0
+                    n = 1
+                    multcount = 0
+                    multcat = ""
+                    multcatnum = 0
+                    multquant = 0
+                    divcount = 0
+                    divcat = ""
+                    divcatnum = 0
+                    divquant = 0
                     resultado = 0
                 }}></input>
             </div>
