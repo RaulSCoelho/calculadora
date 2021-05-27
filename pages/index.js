@@ -857,9 +857,27 @@ function Home() {
                                 resultado = n - subcatnum
                             }
                         }
-                    }}></input><input id='comma' type="button" value="," onClick={() => {
+                    }}></input><input id="igual" type="button" value="=" onClick={() => {
                         var res = document.getElementById('res')
-                        res.value += ","
+                        res.value = resultado
+                        n = 1
+                        multcount = 0
+                        multcat = ""
+                        multcatnum = 0
+                        multquant = 0
+                        divcount = 0
+                        divcat = ""
+                        divcatnum = 0
+                        divquant = 0
+                        somacount = 0
+                        somacat = ""
+                        somacatnum = 0
+                        somaquant = 0
+                        subcount = 0
+                        subcat = ""
+                        subcatnum = 0
+                        subquant = 0
+                        resultado = 0
                     }}></input><input id='div' type="button" value="÷" onClick={() => {
                         subcount = 0
                         somacount = 0
@@ -882,30 +900,6 @@ function Home() {
                         }
                     }}></input>
                 </div>
-            </div>
-            <div id='btn'>
-                <input id="igual" type="button" value="=" onClick={() => {
-                    var res = document.getElementById('res')
-                    res.value = resultado
-                    n = 1
-                    multcount = 0
-                    multcat = ""
-                    multcatnum = 0
-                    multquant = 0
-                    divcount = 0
-                    divcat = ""
-                    divcatnum = 0
-                    divquant = 0
-                    somacount = 0
-                    somacat = ""
-                    somacatnum = 0
-                    somaquant = 0
-                    subcount = 0
-                    subcat = ""
-                    subcatnum = 0
-                    subquant = 0
-                    resultado = 0
-                }}></input>
             </div>
         </section>
         <footer>
