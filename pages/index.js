@@ -151,7 +151,6 @@ function Home() {
                             res.value += 'x'
                             multcount = 2
                         }
-                        window.alert(`resultado: ${resultado} multcatnum: ${multcatnum} multcat: ${multcat} multquant: ${multquant} multcount: ${multcount} n: ${n}`)
                     }}></input>
                 </div>
                 <div>
@@ -270,10 +269,9 @@ function Home() {
                             }
                         }
                     }}></input><input id='menos' type="button" value="-" onClick={() => {
-                        /*var res = document.getElementById('res')
+                        var res = document.getElementById('res')
                         var result = Number(res.value)
-                        res.value += "-"*/
-                        window.alert(`resultado: ${resultado} divcatnum: ${divcatnum} divcat: ${divcat} divquant: ${divquant} divcount: ${divcount} n: ${n}`)
+                        res.value += "-"
                     }}></input>
                 </div>
                 <div>
