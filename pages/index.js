@@ -36,7 +36,7 @@ function Home() {
                     }}></input><input id='btnum' type="button" value="8" onClick={() => {
                         var res = document.getElementById('res')
                         res.value += "8"
-                        if (count > 2 || count < 1) {
+                        if (count < 0) {
                             count = 2
                         }
                         nove++
@@ -142,9 +142,10 @@ function Home() {
                             resultado = num9n * n2
                         }
                     }}></input><input id='menos' type="button" value="-" onClick={() => {
-                        var res = document.getElementById('res')
+                        /*var res = document.getElementById('res')
                         var result = Number(res.value)
-                        res.value += "-"
+                        res.value += "-"*/
+                        window.alert(`num9n: ${num9n} num9: ${num9} nove: ${nove} count: ${count}`)
                     }}></input>
                 </div>
                 <div>
