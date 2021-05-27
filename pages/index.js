@@ -14,6 +14,10 @@ function Home() {
     var somacatnum = 0
     var somaquant = 0
     var somacount = 0
+    var subcat = ""
+    var subcatnum = 0
+    var subquant = 0
+    var subcount = 0
     var n = 1
     return (<div>
         <header>
@@ -79,6 +83,24 @@ function Home() {
                                 resultado = n + somacatnum
                             }
                         }
+                        //SUBTRAÇÃO
+                        if (subcount != 0) {
+                            if (subcount < 0) {
+                                subcount = 2
+                            }
+                            subquant++
+                            if (subcount == 2) {
+                                resultado = n - 7
+                                subcat += "7"
+                                subcount--
+                            } else if (subcount == 1) {
+                                for (subquant; subquant > 1; subquant--) {
+                                    subcat += "7"
+                                }
+                                subcatnum = Number(subcat)
+                                resultado = n - subcatnum
+                            }
+                        }
                     }}></input><input id='btnum' type="button" value="8" onClick={() => {
                         var res = document.getElementById('res')
                         res.value += "8"
@@ -133,6 +155,24 @@ function Home() {
                                 }
                                 somacatnum = Number(somacat)
                                 resultado = n + somacatnum
+                            }
+                        }
+                        //SUBTRAÇÃO
+                        if (subcount != 0) {
+                            if (subcount < 0) {
+                                subcount = 2
+                            }
+                            subquant++
+                            if (subcount == 2) {
+                                resultado = n - 8
+                                subcat += "8"
+                                subcount--
+                            } else if (subcount == 1) {
+                                for (subquant; subquant > 1; subquant--) {
+                                    subcat += "8"
+                                }
+                                subcatnum = Number(subcat)
+                                resultado = n - subcatnum
                             }
                         }
                     }}></input><input id='btnum' type="button" value="9" onClick={() => {
@@ -191,7 +231,26 @@ function Home() {
                                 resultado = n + somacatnum
                             }
                         }
+                        //SUBTRAÇÃO
+                        if (subcount != 0) {
+                            if (subcount < 0) {
+                                subcount = 2
+                            }
+                            subquant++
+                            if (subcount == 2) {
+                                resultado = n - 9
+                                subcat += "9"
+                                subcount--
+                            } else if (subcount == 1) {
+                                for (subquant; subquant > 1; subquant--) {
+                                    subcat += "9"
+                                }
+                                subcatnum = Number(subcat)
+                                resultado = n - subcatnum
+                            }
+                        }
                     }}></input><input id='mult' type="button" value="X" onClick={() => {
+                        subcount = 0
                         somacount = 0
                         divcount = 0
                         n = resultado
@@ -269,6 +328,24 @@ function Home() {
                                 resultado = n + somacatnum
                             }
                         }
+                        //SUBTRAÇÃO
+                        if (subcount != 0) {
+                            if (subcount < 0) {
+                                subcount = 2
+                            }
+                            subquant++
+                            if (subcount == 2) {
+                                resultado = n - 4
+                                subcat += "4"
+                                subcount--
+                            } else if (subcount == 1) {
+                                for (subquant; subquant > 1; subquant--) {
+                                    subcat += "4"
+                                }
+                                subcatnum = Number(subcat)
+                                resultado = n - subcatnum
+                            }
+                        }
                     }}></input><input id='btnum' type="button" value="5" onClick={() => {
                         var res = document.getElementById('res')
                         res.value += "5"
@@ -323,6 +400,24 @@ function Home() {
                                 }
                                 somacatnum = Number(somacat)
                                 resultado = n + somacatnum
+                            }
+                        }
+                        //SUBTRAÇÃO
+                        if (subcount != 0) {
+                            if (subcount < 0) {
+                                subcount = 2
+                            }
+                            subquant++
+                            if (subcount == 2) {
+                                resultado = n - 5
+                                subcat += "5"
+                                subcount--
+                            } else if (subcount == 1) {
+                                for (subquant; subquant > 1; subquant--) {
+                                    subcat += "5"
+                                }
+                                subcatnum = Number(subcat)
+                                resultado = n - subcatnum
                             }
                         }
                     }}></input><input id='btnum' type="button" value="6" onClick={() => {
@@ -381,10 +476,44 @@ function Home() {
                                 resultado = n + somacatnum
                             }
                         }
+                        //SUBTRAÇÃO
+                        if (subcount != 0) {
+                            if (subcount < 0) {
+                                subcount = 2
+                            }
+                            subquant++
+                            if (subcount == 2) {
+                                resultado = n - 6
+                                subcat += "6"
+                                subcount--
+                            } else if (subcount == 1) {
+                                for (subquant; subquant > 1; subquant--) {
+                                    subcat += "6"
+                                }
+                                subcatnum = Number(subcat)
+                                resultado = n - subcatnum
+                            }
+                        }
                     }}></input><input id='menos' type="button" value="-" onClick={() => {
-                        var res = document.getElementById('res')
-                        var result = Number(res.value)
-                        res.value += "-"
+                        somacount = 0
+                        multcount = 0
+                        divcount = 0
+                        n = resultado
+                        subquant = 0
+                        subcat = ""
+                        if (subcount == 0) {
+                            var res = document.getElementById('res')
+                            var result = Number(res.value)
+                            if (resultado == 0) {
+                                n = result
+                            }
+                            res.value += '-'
+                            subcount += 2
+                        } else {
+                            res = document.getElementById('res')
+                            res.value += '-'
+                            subcount = 2
+                        }
                     }}></input>
                 </div>
                 <div>
@@ -444,6 +573,24 @@ function Home() {
                                 resultado = n + somacatnum
                             }
                         }
+                        //SUBTRAÇÃO
+                        if (subcount != 0) {
+                            if (subcount < 0) {
+                                subcount = 2
+                            }
+                            subquant++
+                            if (subcount == 2) {
+                                resultado = n - 1
+                                subcat += "1"
+                                subcount--
+                            } else if (subcount == 1) {
+                                for (subquant; subquant > 1; subquant--) {
+                                    subcat += "1"
+                                }
+                                subcatnum = Number(subcat)
+                                resultado = n - subcatnum
+                            }
+                        }
                     }}></input><input id='btnum' type="button" value="2" onClick={() => {
                         var res = document.getElementById('res')
                         res.value += "2"
@@ -498,6 +645,24 @@ function Home() {
                                 }
                                 somacatnum = Number(somacat)
                                 resultado = n + somacatnum
+                            }
+                        }
+                        //SUBTRAÇÃO
+                        if (subcount != 0) {
+                            if (subcount < 0) {
+                                subcount = 2
+                            }
+                            subquant++
+                            if (subcount == 2) {
+                                resultado = n - 2
+                                subcat += "2"
+                                subcount--
+                            } else if (subcount == 1) {
+                                for (subquant; subquant > 1; subquant--) {
+                                    subcat += "2"
+                                }
+                                subcatnum = Number(subcat)
+                                resultado = n - subcatnum
                             }
                         }
                     }}></input><input id='btnum' type="button" value="3" onClick={() => {
@@ -556,7 +721,26 @@ function Home() {
                                 resultado = n + somacatnum
                             }
                         }
+                        //SUBTRAÇÃO
+                        if (subcount != 0) {
+                            if (subcount < 0) {
+                                subcount = 2
+                            }
+                            subquant++
+                            if (subcount == 2) {
+                                resultado = n - 3
+                                subcat += "3"
+                                subcount--
+                            } else if (subcount == 1) {
+                                for (subquant; subquant > 1; subquant--) {
+                                    subcat += "3"
+                                }
+                                subcatnum = Number(subcat)
+                                resultado = n - subcatnum
+                            }
+                        }
                     }}></input><input id='mais' type="button" value="+" onClick={() => {
+                        subcount = 0
                         multcount = 0
                         divcount = 0
                         n = resultado
@@ -594,6 +778,10 @@ function Home() {
                         somacat = ""
                         somacatnum = 0
                         somaquant = 0
+                        subcount = 0
+                        subcat = ""
+                        subcatnum = 0
+                        subquant = 0
                         resultado = 0
                     }}></input><input id='btnum' type="button" value="0" onClick={() => {
                         var res = document.getElementById('res')
@@ -651,10 +839,29 @@ function Home() {
                                 resultado = n + somacatnum
                             }
                         }
+                        //SUBTRAÇÃO
+                        if (subcount != 0) {
+                            if (subcount < 0) {
+                                subcount = 2
+                            }
+                            subquant++
+                            if (subcount == 2) {
+                                resultado = n - 0
+                                subcat += "0"
+                                subcount--
+                            } else if (subcount == 1) {
+                                for (subquant; subquant > 1; subquant--) {
+                                    subcat += "0"
+                                }
+                                subcatnum = Number(subcat)
+                                resultado = n - subcatnum
+                            }
+                        }
                     }}></input><input id='comma' type="button" value="," onClick={() => {
                         var res = document.getElementById('res')
                         res.value += ","
                     }}></input><input id='div' type="button" value="÷" onClick={() => {
+                        subcount = 0
                         somacount = 0
                         multcount = 0
                         n = resultado
@@ -693,6 +900,10 @@ function Home() {
                     somacat = ""
                     somacatnum = 0
                     somaquant = 0
+                    subcount = 0
+                    subcat = ""
+                    subcatnum = 0
+                    subquant = 0
                     resultado = 0
                 }}></input>
             </div>
