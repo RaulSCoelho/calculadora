@@ -22,7 +22,7 @@ input#res{
     background: rgb(255, 255, 255);
     border-radius: 10px;
     padding: 15px;
-    width: 200px;
+    width: 216px;
     height: 30px;
     margin: auto;
 }
@@ -41,8 +41,8 @@ input#igual{
     text-align: center;
     background-color: white;
     font: bold 15pt Arial;
-    width: 30px;
-    height: 30px;
+    width: 50px;
+    height: 50px;
 }
 
 div#teclado{
@@ -52,48 +52,48 @@ div#teclado{
 input#btnum{
     background-color: white;
     font: bold 15pt Arial;
-    width: 30px;
-    height: 30px;
+    width: 50px;
+    height: 50px;
 }
 
 input#mult{
     background-color: white;
     font: bold 15pt Arial;
-    width: 30px;
-    height: 30px;
+    width: 50px;
+    height: 50px;
 }
 
 input#menos{
     background-color: white;
     font: bold 15pt Arial;
-    width: 30px;
-    height: 30px;
+    width: 50px;
+    height: 50px;
 }
 
 input#mais{
     background-color: white;
     font: bold 15pt Arial;
-    width: 30px;
-    height: 30px;
+    width: 50px;
+    height: 50px;
 }
 
 input#div{
     background-color: white;
     font: bold 15pt Arial;
-    width: 30px;
-    height: 30px;
+    width: 50px;
+    height: 50px;
 }
 
 input#comma{
     background-color: white;
     font: bold 15pt Arial;
-    width: 30px;
-    height: 30px;
+    width: 50px;
+    height: 50px;
 }
 
 input#clear{
     background-color: white;
     font: bold 15pt Arial;
-    width: 30px;
-    height: 30px;
+    width: 50px;
+    height: 50px;
 }
