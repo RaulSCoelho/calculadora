@@ -10,6 +10,10 @@ function Home() {
     var divcatnum = 0
     var divquant = 0
     var divcount = 0
+    var somacat = ""
+    var somacatnum = 0
+    var somaquant = 0
+    var somacount = 0
     var n = 1
     return (<div>
         <header>
@@ -57,6 +61,24 @@ function Home() {
                                 resultado = n / divcatnum
                             }
                         }
+                        //SOMA
+                        if (somacount != 0) {
+                            if (somacount < 0) {
+                                somacount = 2
+                            }
+                            somaquant++
+                            if (somacount == 2) {
+                                resultado = n + 7
+                                somacat += "7"
+                                somacount--
+                            } else if (somacount == 1) {
+                                for (somaquant; somaquant > 1; somaquant--) {
+                                    somacat += "7"
+                                }
+                                somacatnum = Number(somacat)
+                                resultado = n + somacatnum
+                            }
+                        }
                     }}></input><input id='btnum' type="button" value="8" onClick={() => {
                         var res = document.getElementById('res')
                         res.value += "8"
@@ -93,6 +115,24 @@ function Home() {
                                 }
                                 divcatnum = Number(divcat)
                                 resultado = n / divcatnum
+                            }
+                        }
+                        //SOMA
+                        if (somacount != 0) {
+                            if (somacount < 0) {
+                                somacount = 2
+                            }
+                            somaquant++
+                            if (somacount == 2) {
+                                resultado = n + 8
+                                somacat += "8"
+                                somacount--
+                            } else if (somacount == 1) {
+                                for (somaquant; somaquant > 1; somaquant--) {
+                                    somacat += "8"
+                                }
+                                somacatnum = Number(somacat)
+                                resultado = n + somacatnum
                             }
                         }
                     }}></input><input id='btnum' type="button" value="9" onClick={() => {
@@ -133,7 +173,26 @@ function Home() {
                                 resultado = n / divcatnum
                             }
                         }
+                        //SOMA
+                        if (somacount != 0) {
+                            if (somacount < 0) {
+                                somacount = 2
+                            }
+                            somaquant++
+                            if (somacount == 2) {
+                                resultado = n + 9
+                                somacat += "9"
+                                somacount--
+                            } else if (somacount == 1) {
+                                for (somaquant; somaquant > 1; somaquant--) {
+                                    somacat += "9"
+                                }
+                                somacatnum = Number(somacat)
+                                resultado = n + somacatnum
+                            }
+                        }
                     }}></input><input id='mult' type="button" value="X" onClick={() => {
+                        somacount = 0
                         divcount = 0
                         n = resultado
                         multquant = 0
@@ -192,6 +251,24 @@ function Home() {
                                 resultado = n / divcatnum
                             }
                         }
+                        //SOMA
+                        if (somacount != 0) {
+                            if (somacount < 0) {
+                                somacount = 2
+                            }
+                            somaquant++
+                            if (somacount == 2) {
+                                resultado = n + 4
+                                somacat += "4"
+                                somacount--
+                            } else if (somacount == 1) {
+                                for (somaquant; somaquant > 1; somaquant--) {
+                                    somacat += "4"
+                                }
+                                somacatnum = Number(somacat)
+                                resultado = n + somacatnum
+                            }
+                        }
                     }}></input><input id='btnum' type="button" value="5" onClick={() => {
                         var res = document.getElementById('res')
                         res.value += "5"
@@ -230,6 +307,24 @@ function Home() {
                                 resultado = n / divcatnum
                             }
                         }
+                        //SOMA
+                        if (somacount != 0) {
+                            if (somacount < 0) {
+                                somacount = 2
+                            }
+                            somaquant++
+                            if (somacount == 2) {
+                                resultado = n + 5
+                                somacat += "5"
+                                somacount--
+                            } else if (somacount == 1) {
+                                for (somaquant; somaquant > 1; somaquant--) {
+                                    somacat += "5"
+                                }
+                                somacatnum = Number(somacat)
+                                resultado = n + somacatnum
+                            }
+                        }
                     }}></input><input id='btnum' type="button" value="6" onClick={() => {
                         var res = document.getElementById('res')
                         res.value += "6"
@@ -266,6 +361,24 @@ function Home() {
                                 }
                                 divcatnum = Number(divcat)
                                 resultado = n / divcatnum
+                            }
+                        }
+                        //SOMA
+                        if (somacount != 0) {
+                            if (somacount < 0) {
+                                somacount = 2
+                            }
+                            somaquant++
+                            if (somacount == 2) {
+                                resultado = n + 6
+                                somacat += "6"
+                                somacount--
+                            } else if (somacount == 1) {
+                                for (somaquant; somaquant > 1; somaquant--) {
+                                    somacat += "6"
+                                }
+                                somacatnum = Number(somacat)
+                                resultado = n + somacatnum
                             }
                         }
                     }}></input><input id='menos' type="button" value="-" onClick={() => {
@@ -313,6 +426,24 @@ function Home() {
                                 resultado = n / divcatnum
                             }
                         }
+                        //SOMA
+                        if (somacount != 0) {
+                            if (somacount < 0) {
+                                somacount = 2
+                            }
+                            somaquant++
+                            if (somacount == 2) {
+                                resultado = n + 1
+                                somacat += "1"
+                                somacount--
+                            } else if (somacount == 1) {
+                                for (somaquant; somaquant > 1; somaquant--) {
+                                    somacat += "1"
+                                }
+                                somacatnum = Number(somacat)
+                                resultado = n + somacatnum
+                            }
+                        }
                     }}></input><input id='btnum' type="button" value="2" onClick={() => {
                         var res = document.getElementById('res')
                         res.value += "2"
@@ -349,6 +480,24 @@ function Home() {
                                 }
                                 divcatnum = Number(divcat)
                                 resultado = n / divcatnum
+                            }
+                        }
+                        //SOMA
+                        if (somacount != 0) {
+                            if (somacount < 0) {
+                                somacount = 2
+                            }
+                            somaquant++
+                            if (somacount == 2) {
+                                resultado = n + 2
+                                somacat += "2"
+                                somacount--
+                            } else if (somacount == 1) {
+                                for (somaquant; somaquant > 1; somaquant--) {
+                                    somacat += "2"
+                                }
+                                somacatnum = Number(somacat)
+                                resultado = n + somacatnum
                             }
                         }
                     }}></input><input id='btnum' type="button" value="3" onClick={() => {
@@ -389,10 +538,43 @@ function Home() {
                                 resultado = n / divcatnum
                             }
                         }
+                        //SOMA
+                        if (somacount != 0) {
+                            if (somacount < 0) {
+                                somacount = 2
+                            }
+                            somaquant++
+                            if (somacount == 2) {
+                                resultado = n + 3
+                                somacat += "3"
+                                somacount--
+                            } else if (somacount == 1) {
+                                for (somaquant; somaquant > 1; somaquant--) {
+                                    somacat += "3"
+                                }
+                                somacatnum = Number(somacat)
+                                resultado = n + somacatnum
+                            }
+                        }
                     }}></input><input id='mais' type="button" value="+" onClick={() => {
-                        var res = document.getElementById('res')
-                        var result = Number(res.value)
-                        res.value += "+"
+                        multcount = 0
+                        divcount = 0
+                        n = resultado
+                        somaquant = 0
+                        somacat = ""
+                        if (somacount == 0) {
+                            var res = document.getElementById('res')
+                            var result = Number(res.value)
+                            if (resultado == 0) {
+                                n = result
+                            }
+                            res.value += '+'
+                            somacount += 2
+                        } else {
+                            res = document.getElementById('res')
+                            res.value += '+'
+                            somacount = 2
+                        }
                     }}></input>
                 </div>
                 <div>
@@ -408,6 +590,10 @@ function Home() {
                         divcat = ""
                         divcatnum = 0
                         divquant = 0
+                        somacount = 0
+                        somacat = ""
+                        somacatnum = 0
+                        somaquant = 0
                         resultado = 0
                     }}></input><input id='btnum' type="button" value="0" onClick={() => {
                         var res = document.getElementById('res')
@@ -447,10 +633,29 @@ function Home() {
                                 resultado = n / divcatnum
                             }
                         }
+                        //SOMA
+                        if (somacount != 0) {
+                            if (somacount < 0) {
+                                somacount = 2
+                            }
+                            somaquant++
+                            if (somacount == 2) {
+                                resultado = n + 0
+                                somacat += "0"
+                                somacount--
+                            } else if (somacount == 1) {
+                                for (somaquant; somaquant > 1; somaquant--) {
+                                    somacat += "0"
+                                }
+                                somacatnum = Number(somacat)
+                                resultado = n + somacatnum
+                            }
+                        }
                     }}></input><input id='comma' type="button" value="," onClick={() => {
                         var res = document.getElementById('res')
                         res.value += ","
                     }}></input><input id='div' type="button" value="÷" onClick={() => {
+                        somacount = 0
                         multcount = 0
                         n = resultado
                         divquant = 0
@@ -484,6 +689,10 @@ function Home() {
                     divcat = ""
                     divcatnum = 0
                     divquant = 0
+                    somacount = 0
+                    somacat = ""
+                    somacatnum = 0
+                    somaquant = 0
                     resultado = 0
                 }}></input>
             </div>
