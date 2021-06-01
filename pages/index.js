@@ -2,10 +2,6 @@ import Link from 'next/link'
 
 function Home() {
     var resultado = 0
-    var soma = 0
-    var sub = 0
-    var mult = 0
-    var div = 0
     var numeros = []
     var numb = ""
     var n = 0
@@ -34,12 +30,17 @@ function Home() {
                         n = Number(numb)
                     }}></input><input id='mult' type="button" value="×" onClick={() => {//BOTAO DE MULTIPLCAÇÃO
                         var res = document.getElementById('res')
-                        res.value += "×"
-                        mult++
-                        numeros.push(n)
-                        numeros.push("×")
-                        numb = ""
-                        n = 0
+                        if (numb != "") {
+                            numeros.push(n)
+                        }
+                        if (numeros[numeros.length - 1] == "×") {
+                            window.alert("[ERRO]Escreva um número!")
+                        } else {
+                            res.value += "×"
+                            numeros.push("×")
+                            numb = ""
+                            n = 0
+                        }
                     }}></input>
                 </div>
                 <div>
@@ -60,12 +61,17 @@ function Home() {
                         n = Number(numb)
                     }}></input><input id='menos' type="button" value="-" onClick={() => {//BOTAO DE SUBTRAÇÃO
                         var res = document.getElementById('res')
-                        res.value += "-"
-                        sub++
-                        numeros.push(n)
-                        numeros.push("-")
-                        numb = ""
-                        n = 0
+                        if (numb != "") {
+                            numeros.push(n)
+                        }
+                        if (numeros[numeros.length - 1] == "-") {
+                            window.alert("[ERRO]Escreva um número!")
+                        } else {
+                            res.value += "-"
+                            numeros.push("-")
+                            numb = ""
+                            n = 0
+                        }
                     }}></input>
                 </div>
                 <div>
@@ -86,12 +92,17 @@ function Home() {
                         n = Number(numb)
                     }}></input><input id='mais' type="button" value="+" onClick={() => {//BOTAO DE SOMA
                         var res = document.getElementById('res')
-                        res.value += "+"
-                        soma++
-                        numeros.push(n)
-                        numeros.push("+")
-                        numb = ""
-                        n = 0
+                        if (numb != "") {
+                            numeros.push(n)
+                        }
+                        if (numeros[numeros.length - 1] == "+") {
+                            window.alert("[ERRO]Escreva um número!")
+                        } else {
+                            res.value += "+"
+                            numeros.push("+")
+                            numb = ""
+                            n = 0
+                        }
                     }}></input>
                 </div>
                 <div>
@@ -101,10 +112,6 @@ function Home() {
                         numb = ""
                         n = 0
                         numeros = []
-                        soma = 0
-                        sub = 0
-                        mult = 0
-                        div = 0
                     }}></input><input id='btnum' type="button" value="0" onClick={() => {
                         var res = document.getElementById('res')
                         res.value += "0"
@@ -113,45 +120,54 @@ function Home() {
                     }}></input><input id="igual" type="button" value="=" onClick={() => {//BOTAO DE IGUAL
                         var res = document.getElementById('res')
                         numeros.push(n)
+                        window.alert(`numeros: ${numeros} size: ${numeros.length}`)
                         var size = numeros.length
                         //MULTIPLICAÇÃO
-                        for(var i = 0; i<size; i++){
-                            if(numeros[i] == "×"){
-                                resultado = numeros[i-1] * numeros[i+1]
+                        for (var i = 0; i < size; i++) {
+                            if (numeros[i] == "×") {
+                                resultado = numeros[i - 1] * numeros[i + 1]
                                 numeros[i] = resultado
-                                numeros.splice(i-1, 1)
-                                numeros.splice(i, 1)                              
+                                numeros.splice(i - 1, 1)
+                                numeros.splice(i, 1)
+                                i = 0
+                                window.alert(`numeros: ${numeros} size: ${numeros.length}`)
                             }
                         }
                         //DIVISÃO
-                        for(var i = 0; i<size; i++){
-                            if(numeros[i] == "÷"){
-                                resultado = numeros[i-1] / numeros[i+1]
+                        for (var i = 0; i < size; i++) {
+                            if (numeros[i] == "÷") {
+                                resultado = numeros[i - 1] / numeros[i + 1]
                                 numeros[i] = resultado
-                                numeros.splice(i-1, 1)
+                                numeros.splice(i - 1, 1)
                                 numeros.splice(i, 1)
-                            }
-                        }
-                        //SOMA
-                        for(var i = 0; i<size; i++){
-                            if(numeros[i] == "+"){
-                                resultado = numeros[i-1] + numeros[i+1]
-                                numeros[i] = resultado
-                                numeros.splice(i-1, 1)
-                                numeros.splice(i, 1)
+                                i = 0
+                                window.alert(`numeros: ${numeros} size: ${numeros.length}`)
                             }
                         }
                         //SUBTRAÇÃO
-                        for(var i = 0; i<size; i++){
-                            if(numeros[i] == "-"){
-                                resultado = numeros[i-1] - numeros[i+1]
+                        for (var i = 0; i < size; i++) {
+                            if (numeros[i] == "-") {
+                                resultado = numeros[i - 1] - numeros[i + 1]
                                 numeros[i] = resultado
-                                numeros.splice(i-1, 1)
+                                numeros.splice(i - 1, 1)
                                 numeros.splice(i, 1)
+                                i = 0
+                                window.alert(`numeros: ${numeros} size: ${numeros.length}`)
+                            }
+                        }
+                        //SOMA
+                        for (var i = 0; i < size; i++) {
+                            if (numeros[i] == "+") {
+                                resultado = numeros[i - 1] + numeros[i + 1]
+                                numeros[i] = resultado
+                                numeros.splice(i - 1, 1)
+                                numeros.splice(i, 1)
+                                i = 0
+                                window.alert(`numeros: ${numeros} size: ${numeros.length}`)
                             }
                         }
                         size = numeros.length
-                        for(var i = 0; i<=size; i++){
+                        for (var i = 0; i <= size; i++) {
                             size = numeros.length
                             numeros.splice(1, 1)
                         }
@@ -160,18 +176,19 @@ function Home() {
                         numb = ""
                         n = 0
                         numeros = []
-                        soma = 0
-                        sub = 0
-                        mult = 0
-                        div = 0
                     }}></input><input id='div' type="button" value="÷" onClick={() => {//BOTAO DE DIVISÃO
                         var res = document.getElementById('res')
-                        res.value += "÷"
-                        div++
-                        numeros.push(n)
-                        numeros.push("÷")
-                        numb = ""
-                        n = 0
+                        if (numb != "") {
+                            numeros.push(n)
+                        }
+                        if (numeros[numeros.length - 1] == "÷") {
+                            window.alert("[ERRO]Escreva um número!")
+                        } else {
+                            res.value += "÷"
+                            numeros.push("÷")
+                            numb = ""
+                            n = 0
+                        }
                     }}></input>
                 </div>
             </div>
