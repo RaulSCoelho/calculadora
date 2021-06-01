@@ -120,7 +120,6 @@ function Home() {
                     }}></input><input id="igual" type="button" value="=" onClick={() => {//BOTAO DE IGUAL
                         var res = document.getElementById('res')
                         numeros.push(n)
-                        window.alert(`numeros: ${numeros} size: ${numeros.length}`)
                         var size = numeros.length
                         //MULTIPLICAÇÃO
                         for (var i = 0; i < size; i++) {
@@ -130,7 +129,6 @@ function Home() {
                                 numeros.splice(i - 1, 1)
                                 numeros.splice(i, 1)
                                 i = 0
-                                window.alert(`numeros: ${numeros} size: ${numeros.length}`)
                             }
                         }
                         //DIVISÃO
@@ -141,7 +139,6 @@ function Home() {
                                 numeros.splice(i - 1, 1)
                                 numeros.splice(i, 1)
                                 i = 0
-                                window.alert(`numeros: ${numeros} size: ${numeros.length}`)
                             }
                         }
                         //SUBTRAÇÃO
@@ -152,7 +149,6 @@ function Home() {
                                 numeros.splice(i - 1, 1)
                                 numeros.splice(i, 1)
                                 i = 0
-                                window.alert(`numeros: ${numeros} size: ${numeros.length}`)
                             }
                         }
                         //SOMA
@@ -163,7 +159,6 @@ function Home() {
                                 numeros.splice(i - 1, 1)
                                 numeros.splice(i, 1)
                                 i = 0
-                                window.alert(`numeros: ${numeros} size: ${numeros.length}`)
                             }
                         }
                         size = numeros.length
