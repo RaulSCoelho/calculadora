@@ -33,7 +33,7 @@ function Home() {
                         if (numb != "") {
                             numeros.push(n)
                         }
-                        if (numeros[numeros.length - 1] == "×") {
+                        if (numeros[numeros.length - 1] == "×" || numeros[numeros.length - 1] == "÷" || numeros[numeros.length - 1] == "+" || numeros[numeros.length - 1] == "-" || res.value == "") {
                             window.alert("[ERRO]Escreva um número!")
                         } else {
                             res.value += "×"
@@ -64,7 +64,7 @@ function Home() {
                         if (numb != "") {
                             numeros.push(n)
                         }
-                        if (numeros[numeros.length - 1] == "-") {
+                        if (numeros[numeros.length - 1] == "×" || numeros[numeros.length - 1] == "÷" || numeros[numeros.length - 1] == "+" || numeros[numeros.length - 1] == "-" || res.value == "") {
                             window.alert("[ERRO]Escreva um número!")
                         } else {
                             res.value += "-"
@@ -95,7 +95,7 @@ function Home() {
                         if (numb != "") {
                             numeros.push(n)
                         }
-                        if (numeros[numeros.length - 1] == "+") {
+                        if (numeros[numeros.length - 1] == "×" || numeros[numeros.length - 1] == "÷" || numeros[numeros.length - 1] == "+" || numeros[numeros.length - 1] == "-" || res.value == "") {
                             window.alert("[ERRO]Escreva um número!")
                         } else {
                             res.value += "+"
@@ -176,7 +176,7 @@ function Home() {
                         if (numb != "") {
                             numeros.push(n)
                         }
-                        if (numeros[numeros.length - 1] == "÷") {
+                        if (numeros[numeros.length - 1] == "×" || numeros[numeros.length - 1] == "÷" || numeros[numeros.length - 1] == "+" || numeros[numeros.length - 1] == "-" || res.value == "") {
                             window.alert("[ERRO]Escreva um número!")
                         } else {
                             res.value += "÷"
