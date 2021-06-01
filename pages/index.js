@@ -120,8 +120,7 @@ function Home() {
                                 resultado = numeros[i-1] * numeros[i+1]
                                 numeros[i] = resultado
                                 numeros.splice(i-1, 1)
-                                numeros.splice(i, 1)
-                                window.alert(numeros)                              
+                                numeros.splice(i, 1)                              
                             }
                         }
                         //DIVISÃO
@@ -131,7 +130,6 @@ function Home() {
                                 numeros[i] = resultado
                                 numeros.splice(i-1, 1)
                                 numeros.splice(i, 1)
-                                window.alert(numeros)
                             }
                         }
                         //SOMA
@@ -141,7 +139,6 @@ function Home() {
                                 numeros[i] = resultado
                                 numeros.splice(i-1, 1)
                                 numeros.splice(i, 1)
-                                window.alert(numeros)
                             }
                         }
                         //SUBTRAÇÃO
@@ -151,7 +148,6 @@ function Home() {
                                 numeros[i] = resultado
                                 numeros.splice(i-1, 1)
                                 numeros.splice(i, 1)
-                                window.alert(numeros)
                             }
                         }
                         size = numeros.length
