@@ -90,3 +90,10 @@ input#clear{
     width: 50px;
     height: 50px;
 }
+
+input#virgula{
+    background-color: white;
+    font: bold 15pt Arial;
+    width: 50px;
+    height: 50px;
+}

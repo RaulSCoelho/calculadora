@@ -33,7 +33,7 @@ function Home() {
                         if (numb != "") {
                             numeros.push(n)
                         }
-                        if (numeros[numeros.length - 1] == "×" || numeros[numeros.length - 1] == "÷" || numeros[numeros.length - 1] == "+" || numeros[numeros.length - 1] == "-" || res.value == "") {
+                        if (numeros[numeros.length - 1] == "×" || numeros[numeros.length - 1] == "÷" || numeros[numeros.length - 1] == "+" || numeros[numeros.length - 1] == "-" || res.value == "" || numeros[numeros.length - 1] == ",") {
                             window.alert("[ERRO]Escreva um número!")
                         } else {
                             res.value += "×"
@@ -64,7 +64,7 @@ function Home() {
                         if (numb != "") {
                             numeros.push(n)
                         }
-                        if (numeros[numeros.length - 1] == "×" || numeros[numeros.length - 1] == "÷" || numeros[numeros.length - 1] == "+" || numeros[numeros.length - 1] == "-" || res.value == "") {
+                        if (numeros[numeros.length - 1] == "×" || numeros[numeros.length - 1] == "÷" || numeros[numeros.length - 1] == "+" || numeros[numeros.length - 1] == "-" || res.value == "" || numeros[numeros.length - 1] == ",") {
                             window.alert("[ERRO]Escreva um número!")
                         } else {
                             res.value += "-"
@@ -95,7 +95,7 @@ function Home() {
                         if (numb != "") {
                             numeros.push(n)
                         }
-                        if (numeros[numeros.length - 1] == "×" || numeros[numeros.length - 1] == "÷" || numeros[numeros.length - 1] == "+" || numeros[numeros.length - 1] == "-" || res.value == "") {
+                        if (numeros[numeros.length - 1] == "×" || numeros[numeros.length - 1] == "÷" || numeros[numeros.length - 1] == "+" || numeros[numeros.length - 1] == "-" || res.value == "" || numeros[numeros.length - 1] == ",") {
                             window.alert("[ERRO]Escreva um número!")
                         } else {
                             res.value += "+"
@@ -117,10 +117,54 @@ function Home() {
                         res.value += "0"
                         numb += "0"
                         n = Number(numb)
-                    }}></input><input id="igual" type="button" value="=" onClick={() => {//BOTAO DE IGUAL
+                    }}></input><input id='virgula' type="button" value="," onClick={() => {//BOTAO DE VÍRGULA
+                        var res = document.getElementById('res')
+                        if (numb != "") {
+                            numeros.push(n)
+                        }
+                        if (numeros[numeros.length - 1] == "×" || numeros[numeros.length - 1] == "÷" || numeros[numeros.length - 1] == "+" || numeros[numeros.length - 1] == "-" || res.value == "" || numeros[numeros.length - 1] == ",") {
+                            window.alert("[ERRO]Escreva um número!")
+                        } else {
+                            res.value += ","
+                            numeros.push(",")
+                            numb = ""
+                            n = 0
+                        }
+                    }}></input><input id='div' type="button" value="÷" onClick={() => {//BOTAO DE DIVISÃO
+                        var res = document.getElementById('res')
+                        if (numb != "") {
+                            numeros.push(n)
+                        }
+                        if (numeros[numeros.length - 1] == "×" || numeros[numeros.length - 1] == "÷" || numeros[numeros.length - 1] == "+" || numeros[numeros.length - 1] == "-" || res.value == "" || numeros[numeros.length - 1] == ",") {
+                            window.alert("[ERRO]Escreva um número!")
+                        } else {
+                            res.value += "÷"
+                            numeros.push("÷")
+                            numb = ""
+                            n = 0
+                        }
+                    }}></input>
+                </div>
+                <div>
+                    <input id="igual" type="button" value="=" onClick={() => {//BOTAO DE IGUAL
                         var res = document.getElementById('res')
                         numeros.push(n)
                         var size = numeros.length
+                        //VÍRGULA
+                        for (var i = 0; i < size; i++) {
+                            if (numeros[i] == ",") {
+                                var numero = numeros[i + 1]
+                                var cont = 0
+                                for (numero; numero > 1; numero = numero / 10) {
+                                    cont++
+                                }
+                                resultado = (numeros[i - 1] * Math.pow(10, cont) + numeros[i + 1]) / Math.pow(10, cont)
+                                numeros[i] = resultado
+                                numeros.splice(i - 1, 1)
+                                numeros.splice(i, 1)
+                                i = 0
+                            }
+                        }
                         //MULTIPLICAÇÃO
                         for (var i = 0; i < size; i++) {
                             if (numeros[i] == "×") {
@@ -171,19 +215,6 @@ function Home() {
                         numb = ""
                         n = 0
                         numeros = []
-                    }}></input><input id='div' type="button" value="÷" onClick={() => {//BOTAO DE DIVISÃO
-                        var res = document.getElementById('res')
-                        if (numb != "") {
-                            numeros.push(n)
-                        }
-                        if (numeros[numeros.length - 1] == "×" || numeros[numeros.length - 1] == "÷" || numeros[numeros.length - 1] == "+" || numeros[numeros.length - 1] == "-" || res.value == "") {
-                            window.alert("[ERRO]Escreva um número!")
-                        } else {
-                            res.value += "÷"
-                            numeros.push("÷")
-                            numb = ""
-                            n = 0
-                        }
                     }}></input>
                 </div>
             </div>
