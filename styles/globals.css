@@ -97,3 +97,24 @@ input#virgula{
     width: 50px;
     height: 50px;
 }
+
+input#raiz{
+    background-color: white;
+    font: bold 15pt Arial;
+    width: 50px;
+    height: 50px;
+}
+
+input#parent1{
+    background-color: white;
+    font: bold 15pt Arial;
+    width: 50px;
+    height: 50px;
+}
+
+input#parent2{
+    background-color: white;
+    font: bold 15pt Arial;
+    width: 50px;
+    height: 50px;
+}
