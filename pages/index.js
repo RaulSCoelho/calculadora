@@ -4,6 +4,7 @@ function Home() {
     var resultado = 0
     var numeros = []
     var numb = ""
+    var remove = 0
     return (<div>
         <header>
             <h1>Calculadora</h1>
@@ -14,6 +15,7 @@ function Home() {
                 <div>
                     <input id='parent2' type="button" value="(" onClick={() => {//BOTAO DE PARÊNTESES
                         var res = document.getElementById('res')
+                        remove = 0
                         if (numb != "") {
                             numeros.push(numb)
                         }
@@ -26,6 +28,7 @@ function Home() {
                         }
                     }}></input><input id='parent1' type="button" value=")" onClick={() => {//BOTAO DE PARÊNTESES
                         var res = document.getElementById('res')
+                        remove = 0
                         if (numb != "") {
                             numeros.push(numb)
                         }
@@ -38,6 +41,7 @@ function Home() {
                         }
                     }}></input><input id='raiz' type="button" value="√" onClick={() => {//BOTAO DE RAIZ
                         var res = document.getElementById('res')
+                        remove = 0
                         if (numb != "") {
                             numeros.push(numb)
                         }
@@ -46,6 +50,7 @@ function Home() {
                         numb = ""
                     }}></input><input id='div' type="button" value="÷" onClick={() => {//BOTAO DE DIVISÃO
                         var res = document.getElementById('res')
+                        remove = 0
                         if (numb != "") {
                             numeros.push(numb)
                         }
@@ -61,18 +66,22 @@ function Home() {
                 <div>
                     <input id='btnum' type="button" value="7" onClick={() => {
                         var res = document.getElementById('res')
+                        remove = 1
                         res.value += "7"
                         numb += "7"
                     }}></input><input id='btnum' type="button" value="8" onClick={() => {
                         var res = document.getElementById('res')
+                        remove = 1
                         res.value += "8"
                         numb += "8"
                     }}></input><input id='btnum' type="button" value="9" onClick={() => {
                         var res = document.getElementById('res')
+                        remove = 1
                         res.value += "9"
                         numb += "9"
                     }}></input><input id='mult' type="button" value="×" onClick={() => {//BOTAO DE MULTIPLCAÇÃO
                         var res = document.getElementById('res')
+                        remove = 0
                         if (numb != "") {
                             numeros.push(numb)
                         }
@@ -88,18 +97,22 @@ function Home() {
                 <div>
                     <input id='btnum' type="button" value="4" onClick={() => {
                         var res = document.getElementById('res')
+                        remove = 1
                         res.value += "4"
                         numb += "4"
                     }}></input><input id='btnum' type="button" value="5" onClick={() => {
                         var res = document.getElementById('res')
+                        remove = 1
                         res.value += "5"
                         numb += "5"
                     }}></input><input id='btnum' type="button" value="6" onClick={() => {
                         var res = document.getElementById('res')
+                        remove = 1
                         res.value += "6"
                         numb += "6"
                     }}></input><input id='menos' type="button" value="-" onClick={() => {//BOTAO DE SUBTRAÇÃO
                         var res = document.getElementById('res')
+                        remove = 0
                         if (numb != "") {
                             numeros.push(numb)
                         }
@@ -115,18 +128,22 @@ function Home() {
                 <div>
                     <input id='btnum' type="button" value="1" onClick={() => {
                         var res = document.getElementById('res')
+                        remove = 1
                         res.value += "1"
                         numb += "1"
                     }}></input><input id='btnum' type="button" value="2" onClick={() => {
                         var res = document.getElementById('res')
+                        remove = 1
                         res.value += "2"
                         numb += "2"
                     }}></input><input id='btnum' type="button" value="3" onClick={() => {
                         var res = document.getElementById('res')
+                        remove = 1
                         res.value += "3"
                         numb += "3"
                     }}></input><input id='mais' type="button" value="+" onClick={() => {//BOTAO DE SOMA
                         var res = document.getElementById('res')
+                        remove = 0
                         if (numb != "") {
                             numeros.push(numb)
                         }
@@ -142,15 +159,18 @@ function Home() {
                 <div>
                     <input id='clear' type="button" value="C" onClick={() => {//BOTAO DE LIMPAR A TELA
                         var res = document.getElementById('res')
+                        remove = 0
                         res.value = ""
                         numb = ""
                         numeros = []
                     }}></input><input id='btnum' type="button" value="0" onClick={() => {
                         var res = document.getElementById('res')
+                        remove = 1
                         res.value += "0"
                         numb += "0"
                     }}></input><input id='virgula' type="button" value="," onClick={() => {//BOTAO DE VÍRGULA
                         var res = document.getElementById('res')
+                        remove = 0
                         if (numb != "") {
                             numeros.push(numb)
                         }
@@ -163,6 +183,7 @@ function Home() {
                         }
                     }}></input><input id="igual" type="button" value="=" onClick={() => {//BOTAO DE IGUAL
                         var res = document.getElementById('res')
+                        remove = 0
                         if (numb != "") {
                             numeros.push(numb)
                         }
@@ -332,6 +353,22 @@ function Home() {
                         numeros = []
                     }}></input>
                 </div>
+                <input id="delete" type="button" value="⌫" onClick={() => {
+                    var res = document.getElementById('res')
+                    if (remove == 1) {
+                        numeros.push(numb)
+                        remove--
+                    }
+                    var tamanho = numeros.length
+                    var string = numeros[tamanho - 1]
+                    var del = string.slice(0, -1)
+                    numeros[tamanho - 1] = del
+                    if(numeros[tamanho - 1].length == 0){
+                        numeros.splice(tamanho - 1, 1)
+                    }
+                    res.value = res.value.slice(0, -1)
+                    numb = ""
+                }}></input>
             </div>
         </section>
         <footer>
