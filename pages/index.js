@@ -67,18 +67,39 @@ function Home() {
                     <input id='btnum' type="button" value="7" onClick={() => {
                         var res = document.getElementById('res')
                         remove = 1
-                        res.value += "7"
-                        numb += "7"
+                        if (numeros.length == 1 && numeros[0] == resultado) {
+                            res.value = ""
+                            numeros = []
+                            res.value += "7"
+                            numb += "7"
+                        } else {
+                            res.value += "7"
+                            numb += "7"
+                        }
                     }}></input><input id='btnum' type="button" value="8" onClick={() => {
                         var res = document.getElementById('res')
                         remove = 1
-                        res.value += "8"
-                        numb += "8"
+                        if (numeros.length == 1 && numeros[0] == resultado) {
+                            res.value = ""
+                            numeros = []
+                            res.value += "8"
+                            numb += "8"
+                        } else {
+                            res.value += "8"
+                            numb += "8"
+                        }
                     }}></input><input id='btnum' type="button" value="9" onClick={() => {
                         var res = document.getElementById('res')
                         remove = 1
-                        res.value += "9"
-                        numb += "9"
+                        if (numeros.length == 1 && numeros[0] == resultado) {
+                            res.value = ""
+                            numeros = []
+                            res.value += "9"
+                            numb += "9"
+                        } else {
+                            res.value += "9"
+                            numb += "9"
+                        }
                     }}></input><input id='mult' type="button" value="×" onClick={() => {//BOTAO DE MULTIPLCAÇÃO
                         var res = document.getElementById('res')
                         remove = 0
@@ -98,18 +119,39 @@ function Home() {
                     <input id='btnum' type="button" value="4" onClick={() => {
                         var res = document.getElementById('res')
                         remove = 1
-                        res.value += "4"
-                        numb += "4"
+                        if (numeros.length == 1 && numeros[0] == resultado) {
+                            res.value = ""
+                            numeros = []
+                            res.value += "4"
+                            numb += "4"
+                        } else {
+                            res.value += "4"
+                            numb += "4"
+                        }
                     }}></input><input id='btnum' type="button" value="5" onClick={() => {
                         var res = document.getElementById('res')
                         remove = 1
-                        res.value += "5"
-                        numb += "5"
+                        if (numeros.length == 1 && numeros[0] == resultado) {
+                            res.value = ""
+                            numeros = []
+                            res.value += "5"
+                            numb += "5"
+                        } else {
+                            res.value += "5"
+                            numb += "5"
+                        }
                     }}></input><input id='btnum' type="button" value="6" onClick={() => {
                         var res = document.getElementById('res')
                         remove = 1
-                        res.value += "6"
-                        numb += "6"
+                        if (numeros.length == 1 && numeros[0] == resultado) {
+                            res.value = ""
+                            numeros = []
+                            res.value += "6"
+                            numb += "6"
+                        } else {
+                            res.value += "6"
+                            numb += "6"
+                        }
                     }}></input><input id='menos' type="button" value="-" onClick={() => {//BOTAO DE SUBTRAÇÃO
                         var res = document.getElementById('res')
                         remove = 0
@@ -129,18 +171,39 @@ function Home() {
                     <input id='btnum' type="button" value="1" onClick={() => {
                         var res = document.getElementById('res')
                         remove = 1
-                        res.value += "1"
-                        numb += "1"
+                        if (numeros.length == 1 && numeros[0] == resultado) {
+                            res.value = ""
+                            numeros = []
+                            res.value += "1"
+                            numb += "1"
+                        } else {
+                            res.value += "1"
+                            numb += "1"
+                        }
                     }}></input><input id='btnum' type="button" value="2" onClick={() => {
                         var res = document.getElementById('res')
                         remove = 1
-                        res.value += "2"
-                        numb += "2"
+                        if (numeros.length == 1 && numeros[0] == resultado) {
+                            res.value = ""
+                            numeros = []
+                            res.value += "2"
+                            numb += "2"
+                        } else {
+                            res.value += "2"
+                            numb += "2"
+                        }
                     }}></input><input id='btnum' type="button" value="3" onClick={() => {
                         var res = document.getElementById('res')
                         remove = 1
-                        res.value += "3"
-                        numb += "3"
+                        if (numeros.length == 1 && numeros[0] == resultado) {
+                            res.value = ""
+                            numeros = []
+                            res.value += "3"
+                            numb += "3"
+                        } else {
+                            res.value += "3"
+                            numb += "3"
+                        }
                     }}></input><input id='mais' type="button" value="+" onClick={() => {//BOTAO DE SOMA
                         var res = document.getElementById('res')
                         remove = 0
@@ -166,8 +229,15 @@ function Home() {
                     }}></input><input id='btnum' type="button" value="0" onClick={() => {
                         var res = document.getElementById('res')
                         remove = 1
-                        res.value += "0"
-                        numb += "0"
+                        if (numeros.length == 1 && numeros[0] == resultado) {
+                            res.value = ""
+                            numeros = []
+                            res.value += "0"
+                            numb += "0"
+                        } else {
+                            res.value += "0"
+                            numb += "0"
+                        }
                     }}></input><input id='virgula' type="button" value="," onClick={() => {//BOTAO DE VÍRGULA
                         var res = document.getElementById('res')
                         remove = 0
