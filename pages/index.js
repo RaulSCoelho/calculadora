@@ -358,7 +358,7 @@ function Home() {
                         resultado = numeros[0]
                         res.value = resultado
                         numb = ""
-                        numeros = []
+                        numeros = [resultado]
                     }}></input>
                 </div>
                 <input id="delete" type="button" value="⌫" onClick={() => {
