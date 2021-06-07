@@ -261,12 +261,20 @@ function Home() {
                                 //SUBTRAÇÃO DO PARÊNTESES
                                 for (count_inicio; count_inicio < count_fim; count_inicio++) {
                                     if (numeros[count_inicio] == "-") {
-                                        resultado = numeros[count_inicio - 1] - numeros[count_inicio + 1]
-                                        numeros[count_inicio] = resultado
-                                        numeros.splice(count_inicio - 1, 1)
-                                        numeros.splice(count_inicio, 1)
-                                        count_inicio = i
-                                        count_fim--
+                                        if (numeros[count_inicio - 1] == "(") {
+                                            resultado = 0 - Number(numeros[count_inicio + 1])
+                                            numeros[count_inicio] = resultado
+                                            numeros.splice(count_inicio + 1, 1)
+                                            count_inicio = i
+                                            count_fim--
+                                        } else {
+                                            resultado = Number(numeros[count_inicio - 1]) - Number(numeros[count_inicio + 1])
+                                            numeros[count_inicio] = resultado
+                                            numeros.splice(count_inicio - 1, 1)
+                                            numeros.splice(count_inicio, 1)
+                                            count_inicio = i
+                                            count_fim--
+                                        }
                                     }
                                 }
                                 i2 = i
@@ -363,7 +371,7 @@ function Home() {
                     var string = numeros[tamanho - 1]
                     var del = string.slice(0, -1)
                     numeros[tamanho - 1] = del
-                    if(numeros[tamanho - 1].length == 0){
+                    if (numeros[tamanho - 1].length == 0) {
                         numeros.splice(tamanho - 1, 1)
                     }
                     res.value = res.value.slice(0, -1)
