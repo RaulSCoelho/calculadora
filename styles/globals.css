@@ -120,8 +120,13 @@ input#parent2{
 }
 
 input#delete{
-    background-color: white;
-    font: bold 15pt Arial;
+    background-image: url("delete.png");
+    width: 50px;
+    height: 50px;
+}
+
+input#pow{
+    background-image: url("xpowy.png");
     width: 50px;
     height: 50px;
 }

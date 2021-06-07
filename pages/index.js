@@ -278,6 +278,23 @@ function Home() {
                                 }
                                 var count_inicio = i
                                 var count_fim = i2
+                                //POTÊNCIA DO PARÊNTESES
+                                for (count_inicio; count_inicio <= count_fim; count_inicio++) {
+                                    if (numeros[count_inicio] == "^") {
+                                        resultado = Math.pow(Number(numeros[count_inicio - 1]), Number(numeros[count_inicio + 1]))
+                                        numeros[count_inicio] = resultado
+                                        numeros.splice(count_inicio - 1, 1)
+                                        numeros.splice(count_inicio, 1)
+                                        count_inicio = i
+                                        count_fim--
+                                    }
+                                }
+                                i2 = i
+                                while (numeros[i2] != ")") {
+                                    i2++
+                                }
+                                count_inicio = i
+                                count_fim = i2
                                 //RAIZ DO PARÊNTESES
                                 for (count_inicio; count_inicio <= count_fim; count_inicio++) {
                                     if (numeros[count_inicio] == "√") {
@@ -370,6 +387,18 @@ function Home() {
                                 numeros.splice(count_inicio + 1, 1)
                             }
                         }
+                        //POTÊNCIA
+                        for (var i = 0; i < size; i++) {
+                            if (numeros[i] == "^") {
+                                var numero1 = Number(numeros[i - 1])
+                                var numero2 = Number(numeros[i + 1])
+                                resultado = Math.pow(numero1, numero2)
+                                numeros[i] = resultado
+                                numeros.splice(i - 1, 1)
+                                numeros.splice(i, 1)
+                                i = 0
+                            }
+                        }
                         //RAIZ
                         for (var i = 0; i < size; i++) {
                             if (numeros[i] == "√") {
@@ -431,22 +460,33 @@ function Home() {
                         numeros = [resultado]
                     }}></input>
                 </div>
-                <input id="delete" type="button" value="⌫" onClick={() => {
-                    var res = document.getElementById('res')
-                    if (remove == 1) {
-                        numeros.push(numb)
-                        remove--
-                    }
-                    var tamanho = numeros.length
-                    var string = numeros[tamanho - 1]
-                    var del = string.slice(0, -1)
-                    numeros[tamanho - 1] = del
-                    if (numeros[tamanho - 1].length == 0) {
-                        numeros.splice(tamanho - 1, 1)
-                    }
-                    res.value = res.value.slice(0, -1)
-                    numb = ""
-                }}></input>
+                <div>
+                    <input id="pow" type="button" value="" onClick={() => {//BOTÃO DE POTÊNCIA
+                        var res = document.getElementById('res')
+                        remove = 0
+                        if (numb != "") {
+                            numeros.push(numb)
+                        }
+                        res.value += "^"
+                        numeros.push("^")
+                        numb = ""
+                    }}></input><input id="delete" type="button" value="" onClick={() => {//BOTAO DE APAGAR
+                        var res = document.getElementById('res')
+                        if (remove == 1) {
+                            numeros.push(numb)
+                            remove--
+                        }
+                        var tamanho = numeros.length
+                        var string = numeros[tamanho - 1]
+                        var del = string.slice(0, -1)
+                        numeros[tamanho - 1] = del
+                        if (numeros[tamanho - 1].length == 0) {
+                            numeros.splice(tamanho - 1, 1)
+                        }
+                        res.value = res.value.slice(0, -1)
+                        numb = ""
+                    }}></input>
+                </div>
             </div>
         </section>
         <footer>
