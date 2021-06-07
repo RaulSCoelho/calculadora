@@ -274,7 +274,8 @@ function Home() {
                         //RAIZ
                         for (var i = 0; i < size; i++) {
                             if (numeros[i] == "√") {
-                                resultado = Math.pow(Number(numeros[i + 1], 0.5))
+                                var numero = Number(numeros[i + 1])
+                                resultado = Math.pow(numero, 0.5)
                                 numeros[i] = resultado
                                 numeros.splice(i + 1, 1)
                                 i = 0
