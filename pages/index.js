@@ -35,6 +35,7 @@ function Home() {
                         } else {
                             window.alert("[ERRO]Escreva um sinal!")
                         }
+                        remove2 = 0
                     }}></input><input id='parent1' type="button" value=")" onClick={() => {//BOTAO DE PARÊNTESES
                         var res = document.getElementById('res')
                         remove = 0
@@ -56,6 +57,7 @@ function Home() {
                             numeros.push(")")
                             numb = ""
                         }
+                        remove2 = 0
                     }}></input><input id='raiz' type="button" value="√" onClick={() => {//BOTAO DE RAIZ
                         var res = document.getElementById('res')
                         remove = 0
@@ -73,6 +75,7 @@ function Home() {
                         res.value += "√"
                         numeros.push("√")
                         numb = ""
+                        remove2 = 0
                     }}></input><input id='div' type="button" value="÷" onClick={() => {//BOTAO DE DIVISÃO
                         var res = document.getElementById('res')
                         remove = 0
@@ -94,6 +97,7 @@ function Home() {
                             numeros.push("÷")
                             numb = ""
                         }
+                        remove2 = 0
                     }}></input>
                 </div>
                 <div>
@@ -154,6 +158,7 @@ function Home() {
                             numeros.push("×")
                             numb = ""
                         }
+                        remove2 = 0
                     }}></input>
                 </div>
                 <div>
@@ -214,6 +219,7 @@ function Home() {
                             numeros.push("-")
                             numb = ""
                         }
+                        remove2 = 0
                     }}></input>
                 </div>
                 <div>
@@ -318,6 +324,7 @@ function Home() {
                             numeros.push(",")
                             numb = ""
                         }
+                        remove2 = 0
                     }}></input><input id="igual" type="button" value="=" onClick={() => {//BOTAO DE IGUAL
                         var res = document.getElementById('res')
                         remove = 0
@@ -546,6 +553,7 @@ function Home() {
                         res.value += "^"
                         numeros.push("^")
                         numb = ""
+                        remove2 = 0
                     }}></input><input id="delete" type="button" value="" onClick={() => {//BOTAO DE APAGAR
                         var res = document.getElementById('res')
                         if (remove2 == 0) {
