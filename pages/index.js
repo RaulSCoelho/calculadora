@@ -5,6 +5,7 @@ function Home() {
     var numeros = []
     var numb = ""
     var remove = 0
+    var remove2 = 0
     return (<div>
         <header>
             <h1>Calculadora</h1>
@@ -16,8 +17,16 @@ function Home() {
                     <input id='parent2' type="button" value="(" onClick={() => {//BOTAO DE PARÊNTESES
                         var res = document.getElementById('res')
                         remove = 0
-                        if (numb != "") {
-                            numeros.push(numb)
+                        if (remove2 == 0) {
+                            if (numb != "") {
+                                numeros.push(numb)
+                                remove--
+                            }
+                        } else {
+                            if (numb != "") {
+                                numeros[numeros.length - 1] += (numb)
+                                remove--
+                            }
                         }
                         if (res.value == "" || numeros[numeros.length - 1] == "×" || numeros[numeros.length - 1] == "÷" || numeros[numeros.length - 1] == "+" || numeros[numeros.length - 1] == "-" || numeros[numeros.length - 1] == "(" || numeros[numeros.length - 1] == "√") {
                             res.value += "("
@@ -29,8 +38,16 @@ function Home() {
                     }}></input><input id='parent1' type="button" value=")" onClick={() => {//BOTAO DE PARÊNTESES
                         var res = document.getElementById('res')
                         remove = 0
-                        if (numb != "") {
-                            numeros.push(numb)
+                        if (remove2 == 0) {
+                            if (numb != "") {
+                                numeros.push(numb)
+                                remove--
+                            }
+                        } else {
+                            if (numb != "") {
+                                numeros[numeros.length - 1] += (numb)
+                                remove--
+                            }
                         }
                         if (res.value == "" || numeros[numeros.length - 1] == "×" || numeros[numeros.length - 1] == "÷" || numeros[numeros.length - 1] == "+" || numeros[numeros.length - 1] == "-" || numeros[numeros.length - 1] == "(") {
                             window.alert("[ERRO]Escreva um número!")
@@ -42,8 +59,16 @@ function Home() {
                     }}></input><input id='raiz' type="button" value="√" onClick={() => {//BOTAO DE RAIZ
                         var res = document.getElementById('res')
                         remove = 0
-                        if (numb != "") {
-                            numeros.push(numb)
+                        if (remove2 == 0) {
+                            if (numb != "") {
+                                numeros.push(numb)
+                                remove--
+                            }
+                        } else {
+                            if (numb != "") {
+                                numeros[numeros.length - 1] += (numb)
+                                remove--
+                            }
                         }
                         res.value += "√"
                         numeros.push("√")
@@ -51,8 +76,16 @@ function Home() {
                     }}></input><input id='div' type="button" value="÷" onClick={() => {//BOTAO DE DIVISÃO
                         var res = document.getElementById('res')
                         remove = 0
-                        if (numb != "") {
-                            numeros.push(numb)
+                        if (remove2 == 0) {
+                            if (numb != "") {
+                                numeros.push(numb)
+                                remove--
+                            }
+                        } else {
+                            if (numb != "") {
+                                numeros[numeros.length - 1] += (numb)
+                                remove--
+                            }
                         }
                         if (numeros[numeros.length - 1] == "×" || numeros[numeros.length - 1] == "÷" || numeros[numeros.length - 1] == "+" || numeros[numeros.length - 1] == "-" || res.value == "" || numeros[numeros.length - 1] == ",") {
                             window.alert("[ERRO]Escreva um número!")
@@ -103,8 +136,16 @@ function Home() {
                     }}></input><input id='mult' type="button" value="×" onClick={() => {//BOTAO DE MULTIPLCAÇÃO
                         var res = document.getElementById('res')
                         remove = 0
-                        if (numb != "") {
-                            numeros.push(numb)
+                        if (remove2 == 0) {
+                            if (numb != "") {
+                                numeros.push(numb)
+                                remove--
+                            }
+                        } else {
+                            if (numb != "") {
+                                numeros[numeros.length - 1] += (numb)
+                                remove--
+                            }
                         }
                         if (numeros[numeros.length - 1] == "×" || numeros[numeros.length - 1] == "÷" || numeros[numeros.length - 1] == "+" || numeros[numeros.length - 1] == "-" || res.value == "" || numeros[numeros.length - 1] == ",") {
                             window.alert("[ERRO]Escreva um número!")
@@ -155,8 +196,16 @@ function Home() {
                     }}></input><input id='menos' type="button" value="-" onClick={() => {//BOTAO DE SUBTRAÇÃO
                         var res = document.getElementById('res')
                         remove = 0
-                        if (numb != "") {
-                            numeros.push(numb)
+                        if (remove2 == 0) {
+                            if (numb != "") {
+                                numeros.push(numb)
+                                remove--
+                            }
+                        } else {
+                            if (numb != "") {
+                                numeros[numeros.length - 1] += (numb)
+                                remove--
+                            }
                         }
                         if (numeros[numeros.length - 1] == "×" || numeros[numeros.length - 1] == "÷" || numeros[numeros.length - 1] == "+" || numeros[numeros.length - 1] == "-" || res.value == "" || numeros[numeros.length - 1] == ",") {
                             window.alert("[ERRO]Escreva um número!")
@@ -207,8 +256,16 @@ function Home() {
                     }}></input><input id='mais' type="button" value="+" onClick={() => {//BOTAO DE SOMA
                         var res = document.getElementById('res')
                         remove = 0
-                        if (numb != "") {
-                            numeros.push(numb)
+                        if (remove2 == 0) {
+                            if (numb != "") {
+                                numeros.push(numb)
+                                remove--
+                            }
+                        } else {
+                            if (numb != "") {
+                                numeros[numeros.length - 1] += (numb)
+                                remove--
+                            }
                         }
                         if (numeros[numeros.length - 1] == "×" || numeros[numeros.length - 1] == "÷" || numeros[numeros.length - 1] == "+" || numeros[numeros.length - 1] == "-" || res.value == "" || numeros[numeros.length - 1] == ",") {
                             window.alert("[ERRO]Escreva um número!")
@@ -217,6 +274,7 @@ function Home() {
                             numeros.push("+")
                             numb = ""
                         }
+                        remove2 = 0
                     }}></input>
                 </div>
                 <div>
@@ -226,6 +284,7 @@ function Home() {
                         res.value = ""
                         numb = ""
                         numeros = []
+                        remove2 = 0
                     }}></input><input id='btnum' type="button" value="0" onClick={() => {
                         var res = document.getElementById('res')
                         remove = 1
@@ -241,8 +300,16 @@ function Home() {
                     }}></input><input id='virgula' type="button" value="," onClick={() => {//BOTAO DE VÍRGULA
                         var res = document.getElementById('res')
                         remove = 0
-                        if (numb != "") {
-                            numeros.push(numb)
+                        if (remove2 == 0) {
+                            if (numb != "") {
+                                numeros.push(numb)
+                                remove--
+                            }
+                        } else {
+                            if (numb != "") {
+                                numeros[numeros.length - 1] += (numb)
+                                remove--
+                            }
                         }
                         if (numeros[numeros.length - 1] == "×" || numeros[numeros.length - 1] == "÷" || numeros[numeros.length - 1] == "+" || numeros[numeros.length - 1] == "-" || res.value == "" || numeros[numeros.length - 1] == ",") {
                             window.alert("[ERRO]Escreva um número!")
@@ -458,23 +525,39 @@ function Home() {
                         res.value = resultado
                         numb = ""
                         numeros = [resultado]
+                        remove2 = 0
                     }}></input>
                 </div>
                 <div>
                     <input id="pow" type="button" value="" onClick={() => {//BOTÃO DE POTÊNCIA
                         var res = document.getElementById('res')
                         remove = 0
-                        if (numb != "") {
-                            numeros.push(numb)
+                        if (remove2 == 0) {
+                            if (numb != "") {
+                                numeros.push(numb)
+                                remove--
+                            }
+                        } else {
+                            if (numb != "") {
+                                numeros[numeros.length - 1] += (numb)
+                                remove--
+                            }
                         }
                         res.value += "^"
                         numeros.push("^")
                         numb = ""
                     }}></input><input id="delete" type="button" value="" onClick={() => {//BOTAO DE APAGAR
                         var res = document.getElementById('res')
-                        if (remove == 1) {
-                            numeros.push(numb)
-                            remove--
+                        if (remove2 == 0) {
+                            if (remove == 1) {
+                                numeros.push(numb)
+                                remove--
+                            }
+                        } else {
+                            if (remove == 1) {
+                                numeros[numeros.length - 1] += (numb)
+                                remove--
+                            }
                         }
                         var tamanho = numeros.length
                         var string = numeros[tamanho - 1]
@@ -485,6 +568,7 @@ function Home() {
                         }
                         res.value = res.value.slice(0, -1)
                         numb = ""
+                        remove2++
                     }}></input>
                 </div>
             </div>
