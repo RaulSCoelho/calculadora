@@ -20,12 +20,10 @@ function Home() {
                         if (remove2 == 0) {
                             if (numb != "") {
                                 numeros.push(numb)
-                                remove--
                             }
                         } else {
                             if (numb != "") {
                                 numeros[numeros.length - 1] += (numb)
-                                remove--
                             }
                         }
                         if (res.value == "" || numeros[numeros.length - 1] == "×" || numeros[numeros.length - 1] == "÷" || numeros[numeros.length - 1] == "+" || numeros[numeros.length - 1] == "-" || numeros[numeros.length - 1] == "(" || numeros[numeros.length - 1] == "√") {
@@ -42,12 +40,10 @@ function Home() {
                         if (remove2 == 0) {
                             if (numb != "") {
                                 numeros.push(numb)
-                                remove--
                             }
                         } else {
                             if (numb != "") {
                                 numeros[numeros.length - 1] += (numb)
-                                remove--
                             }
                         }
                         if (res.value == "" || numeros[numeros.length - 1] == "×" || numeros[numeros.length - 1] == "÷" || numeros[numeros.length - 1] == "+" || numeros[numeros.length - 1] == "-" || numeros[numeros.length - 1] == "(") {
@@ -64,12 +60,10 @@ function Home() {
                         if (remove2 == 0) {
                             if (numb != "") {
                                 numeros.push(numb)
-                                remove--
                             }
                         } else {
                             if (numb != "") {
                                 numeros[numeros.length - 1] += (numb)
-                                remove--
                             }
                         }
                         res.value += "√"
@@ -82,12 +76,10 @@ function Home() {
                         if (remove2 == 0) {
                             if (numb != "") {
                                 numeros.push(numb)
-                                remove--
                             }
                         } else {
                             if (numb != "") {
                                 numeros[numeros.length - 1] += (numb)
-                                remove--
                             }
                         }
                         if (numeros[numeros.length - 1] == "×" || numeros[numeros.length - 1] == "÷" || numeros[numeros.length - 1] == "+" || numeros[numeros.length - 1] == "-" || res.value == "" || numeros[numeros.length - 1] == ",") {
@@ -143,12 +135,10 @@ function Home() {
                         if (remove2 == 0) {
                             if (numb != "") {
                                 numeros.push(numb)
-                                remove--
                             }
                         } else {
                             if (numb != "") {
                                 numeros[numeros.length - 1] += (numb)
-                                remove--
                             }
                         }
                         if (numeros[numeros.length - 1] == "×" || numeros[numeros.length - 1] == "÷" || numeros[numeros.length - 1] == "+" || numeros[numeros.length - 1] == "-" || res.value == "" || numeros[numeros.length - 1] == ",") {
@@ -204,12 +194,10 @@ function Home() {
                         if (remove2 == 0) {
                             if (numb != "") {
                                 numeros.push(numb)
-                                remove--
                             }
                         } else {
                             if (numb != "") {
                                 numeros[numeros.length - 1] += (numb)
-                                remove--
                             }
                         }
                         if (numeros[numeros.length - 1] == "×" || numeros[numeros.length - 1] == "÷" || numeros[numeros.length - 1] == "+" || numeros[numeros.length - 1] == "-" || res.value == "" || numeros[numeros.length - 1] == ",") {
@@ -265,12 +253,10 @@ function Home() {
                         if (remove2 == 0) {
                             if (numb != "") {
                                 numeros.push(numb)
-                                remove--
                             }
                         } else {
                             if (numb != "") {
                                 numeros[numeros.length - 1] += (numb)
-                                remove--
                             }
                         }
                         if (numeros[numeros.length - 1] == "×" || numeros[numeros.length - 1] == "÷" || numeros[numeros.length - 1] == "+" || numeros[numeros.length - 1] == "-" || res.value == "" || numeros[numeros.length - 1] == ",") {
@@ -309,12 +295,10 @@ function Home() {
                         if (remove2 == 0) {
                             if (numb != "") {
                                 numeros.push(numb)
-                                remove--
                             }
                         } else {
                             if (numb != "") {
                                 numeros[numeros.length - 1] += (numb)
-                                remove--
                             }
                         }
                         if (numeros[numeros.length - 1] == "×" || numeros[numeros.length - 1] == "÷" || numeros[numeros.length - 1] == "+" || numeros[numeros.length - 1] == "-" || res.value == "" || numeros[numeros.length - 1] == ",") {
@@ -542,12 +526,10 @@ function Home() {
                         if (remove2 == 0) {
                             if (numb != "") {
                                 numeros.push(numb)
-                                remove--
                             }
                         } else {
                             if (numb != "") {
                                 numeros[numeros.length - 1] += (numb)
-                                remove--
                             }
                         }
                         res.value += "^"
@@ -576,7 +558,9 @@ function Home() {
                         }
                         res.value = res.value.slice(0, -1)
                         numb = ""
-                        remove2++
+                        if(numeros[numeros.length - 1] != "(" && numeros[numeros.length - 1] != ")"){
+                            remove2++
+                        }
                     }}></input>
                 </div>
             </div>
